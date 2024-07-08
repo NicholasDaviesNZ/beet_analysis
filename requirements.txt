@@ -1,0 +1,8 @@
+pandas
+torch
+numpy
+numba
+geopandas
+rasterio
+scikit-learn
+pillow

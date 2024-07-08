@@ -1,0 +1,19 @@
+{
+  "name": "Dockerfile",
+  "context": "..",
+  "dockerFile": "./Dockerfile",
+  "runArgs": [
+      "--gpus=all"
+  ],
+  "customizations": {
+      "vscode": {
+          "extensions": [
+              "ms-azuretools.vscode-docker",
+              "ms-python.python",
+              "ms-python.vscode-pylance",
+              "ms-python.isort",
+              "ms-toolsai.jupyter"
+          ]
+      }
+  }
+}

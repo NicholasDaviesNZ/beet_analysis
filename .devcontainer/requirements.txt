@@ -1,0 +1,6 @@
+pandas
+torch
+numpy
+numba
+geopandas
+rasterio
