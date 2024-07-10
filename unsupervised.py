@@ -50,10 +50,10 @@ def load_images_from_directory(directory):
 
 def create_seg(in_dir, save_dir, combined_array):
     """
-    runs the kmeans clasifier on 3 cats. it takes in the array built by the load function, along with the direcorty the
+    runs the kmeans clasifier on 3 cats (giveing it 4 seems to do a bit better job). it takes in the array built by the load function, along with the direcorty the
     images came from - this is just for naming, and the dir the masks will be saved to, and it saves the k-means groups as masks to that dir
     """
-    kmeans = KMeans(n_clusters=3, random_state=0) 
+    kmeans = KMeans(n_clusters=4, random_state=0) 
     kmeans.fit(combined_array)
     cluster_labels = kmeans.labels_
     clustered_images =  np.zeros((img_num, *img_size))

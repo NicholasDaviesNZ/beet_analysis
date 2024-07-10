@@ -6,3 +6,6 @@ geopandas
 rasterio
 scikit-learn
 pillow
+transformers
+torchvision
+segmentation_models_pytorch
