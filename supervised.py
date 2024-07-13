@@ -19,6 +19,7 @@ import segmentation_models_pytorch as smp
 import torch.nn as nn
 import torch.optim as optim
 from torchvision.transforms import ToPILImage
+torch.cuda.empty_cache()
 
 path_to_images_with_masks = "/workspaces/beet_analysis/images_with_masks/"
 path_to_masks = "/workspaces/beet_analysis/images_masks/"
@@ -69,7 +70,10 @@ class BeetDataset(Dataset):
         return padded_image
     
 transform = transforms.Compose([
-    transforms.ToTensor()
+    transforms.ToTensor(),
+    transforms.ColorJitter(contrast=0.5),
+    transforms.RandomRotation(30),
+    transforms.CenterCrop(480),
 ])
 
 # built train and test datasets
